@@ -20,7 +20,7 @@ struct DefaultOneDayViewModel: OneDayViewModel {
     let day: Int
     let weekday: String
     let dayType: DayType
-    let isSelected: Bool
+    var isSelected: Bool
 }
 
 extension DefaultOneDayViewModel {
