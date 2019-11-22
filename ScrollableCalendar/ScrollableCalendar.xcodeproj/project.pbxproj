@@ -160,6 +160,15 @@
 			path = YearInformation;
 			sourceTree = "<group>";
 		};
+		950A0E5D238820CF00E27EDB /* SharedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				959C02ED238809A4007B1837 /* AppDelegate.swift */,
+				959C02EF238809A4007B1837 /* SceneDelegate.swift */,
+			);
+			path = SharedObjects;
+			sourceTree = "<group>";
+		};
 		959C02E1238809A4007B1837 = {
 			isa = PBXGroup;
 			children = (
@@ -187,8 +196,7 @@
 		959C02EC238809A4007B1837 /* ScrollableCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				959C02ED238809A4007B1837 /* AppDelegate.swift */,
-				959C02EF238809A4007B1837 /* SceneDelegate.swift */,
+				950A0E5D238820CF00E27EDB /* SharedObjects */,
 				959C02F1238809A4007B1837 /* ViewController.swift */,
 				959C02F3238809A4007B1837 /* Main.storyboard */,
 				959C02F6238809A8007B1837 /* Assets.xcassets */,
