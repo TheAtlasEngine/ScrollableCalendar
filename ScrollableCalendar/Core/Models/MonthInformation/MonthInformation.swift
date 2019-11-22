@@ -8,19 +8,19 @@
 
 import Foundation
 
-protocol MonthInformation {
+public protocol MonthInformation {
     var year: Int { get }
     var month: Int { get }
     var numberOfDays: Int { get }
 }
 
-struct DefaultMonthInformation: MonthInformation {
-    let year: Int
-    let month: Int
-    let numberOfDays: Int
+public struct DefaultMonthInformation: MonthInformation {
+    public let year: Int
+    public let month: Int
+    public let numberOfDays: Int
 }
 
-extension DefaultMonthInformation {
+public extension DefaultMonthInformation {
     
     init(calendar: Calendar, date: Date) {
         let theYear = calendar.component(.year, from: date)

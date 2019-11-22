@@ -8,21 +8,23 @@
 
 import Foundation
 
-protocol DayInformation {
+public protocol DayInformation {
     var year: Int { get }
     var month: Int { get }
     var day: Int { get }
     var weekday: String { get }
+    var dayType: DayType { get }
 }
 
-struct DefaultDayInformation: DayInformation {
-    let year: Int
-    let month: Int
-    let day: Int
-    let weekday: String
+public struct DefaultDayInformation: DayInformation {
+    public let year: Int
+    public let month: Int
+    public let day: Int
+    public let weekday: String
+    public let dayType: DayType
 }
 
-extension DefaultDayInformation {
+public extension DefaultDayInformation {
     
     init(calendar: Calendar, date: Date) {
         self.year = calendar.component(.year, from: date)
@@ -31,5 +33,7 @@ extension DefaultDayInformation {
         
         let weekdayIndex = calendar.component(.weekday, from: date)
         self.weekday = calendar.shortWeekdaySymbols[weekdayIndex]
+        
+        self.dayType = DayType(date: date)
     }
 }

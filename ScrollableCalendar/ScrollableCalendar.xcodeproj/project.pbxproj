@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		950A0E572388182700E27EDB /* MonthInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E562388182700E27EDB /* MonthInformation.swift */; };
 		950A0E5C23881A7C00E27EDB /* YearInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E5B23881A7C00E27EDB /* YearInformation.swift */; };
+		950A0E60238821C100E27EDB /* OneDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E5F238821C100E27EDB /* OneDayViewModel.swift */; };
+		952E6D9F23882534006CF985 /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E622388225D00E27EDB /* DayType.swift */; };
 		959C02EE238809A4007B1837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02ED238809A4007B1837 /* AppDelegate.swift */; };
 		959C02F0238809A4007B1837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02EF238809A4007B1837 /* SceneDelegate.swift */; };
 		959C02F2238809A4007B1837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02F1238809A4007B1837 /* ViewController.swift */; };
@@ -80,6 +82,8 @@
 /* Begin PBXFileReference section */
 		950A0E562388182700E27EDB /* MonthInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthInformation.swift; sourceTree = "<group>"; };
 		950A0E5B23881A7C00E27EDB /* YearInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearInformation.swift; sourceTree = "<group>"; };
+		950A0E5F238821C100E27EDB /* OneDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDayViewModel.swift; sourceTree = "<group>"; };
+		950A0E622388225D00E27EDB /* DayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayType.swift; sourceTree = "<group>"; };
 		959C02EA238809A4007B1837 /* ScrollableCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959C02ED238809A4007B1837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959C02EF238809A4007B1837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,31 @@
 			path = YearInformation;
 			sourceTree = "<group>";
 		};
+		950A0E5D238820CF00E27EDB /* SharedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				959C02ED238809A4007B1837 /* AppDelegate.swift */,
+				959C02EF238809A4007B1837 /* SceneDelegate.swift */,
+			);
+			path = SharedObjects;
+			sourceTree = "<group>";
+		};
+		950A0E5E2388218700E27EDB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				950A0E612388223B00E27EDB /* OneDayViewModel */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		950A0E612388223B00E27EDB /* OneDayViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				950A0E5F238821C100E27EDB /* OneDayViewModel.swift */,
+			);
+			path = OneDayViewModel;
+			sourceTree = "<group>";
+		};
 		959C02E1238809A4007B1837 = {
 			isa = PBXGroup;
 			children = (
@@ -187,8 +216,8 @@
 		959C02EC238809A4007B1837 /* ScrollableCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				959C02ED238809A4007B1837 /* AppDelegate.swift */,
-				959C02EF238809A4007B1837 /* SceneDelegate.swift */,
+				950A0E5E2388218700E27EDB /* ViewModels */,
+				950A0E5D238820CF00E27EDB /* SharedObjects */,
 				959C02F1238809A4007B1837 /* ViewController.swift */,
 				959C02F3238809A4007B1837 /* Main.storyboard */,
 				959C02F6238809A8007B1837 /* Assets.xcassets */,
@@ -248,6 +277,7 @@
 		959C034323880D47007B1837 /* DayInformation */ = {
 			isa = PBXGroup;
 			children = (
+				950A0E622388225D00E27EDB /* DayType.swift */,
 				959C034123880D2F007B1837 /* DayInformation.swift */,
 			);
 			path = DayInformation;
@@ -458,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950A0E60238821C100E27EDB /* OneDayViewModel.swift in Sources */,
 				959C02F2238809A4007B1837 /* ViewController.swift in Sources */,
 				959C02EE238809A4007B1837 /* AppDelegate.swift in Sources */,
 				959C02F0238809A4007B1837 /* SceneDelegate.swift in Sources */,
@@ -484,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952E6D9F23882534006CF985 /* DayType.swift in Sources */,
 				959C034223880D2F007B1837 /* DayInformation.swift in Sources */,
 				950A0E572388182700E27EDB /* MonthInformation.swift in Sources */,
 				950A0E5C23881A7C00E27EDB /* YearInformation.swift in Sources */,

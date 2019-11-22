@@ -8,17 +8,17 @@
 
 import Foundation
 
-protocol YearInformation {
+public protocol YearInformation {
     var year: Int { get }
     var isLeapYear: Bool { get }
 }
 
-struct DefaultYearInformation: YearInformation {
-    let year: Int
-    let isLeapYear: Bool
+public struct DefaultYearInformation: YearInformation {
+    public let year: Int
+    public let isLeapYear: Bool
 }
 
-extension DefaultYearInformation {
+public extension DefaultYearInformation {
     
     init(calendar: Calendar, date: Date) {
         let theYear = calendar.component(.year, from: date)
