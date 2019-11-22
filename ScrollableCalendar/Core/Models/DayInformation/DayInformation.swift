@@ -9,5 +9,8 @@
 import Foundation
 
 protocol DayInformation {
-    
+    var year: Int { get }
+    var month: Int { get }
+    var day: Int { get }
+    var weekday: String { get }
 }
