@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		950A0E572388182700E27EDB /* MonthInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E562388182700E27EDB /* MonthInformation.swift */; };
+		950A0E5C23881A7C00E27EDB /* YearInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E5B23881A7C00E27EDB /* YearInformation.swift */; };
 		959C02EE238809A4007B1837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02ED238809A4007B1837 /* AppDelegate.swift */; };
 		959C02F0238809A4007B1837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02EF238809A4007B1837 /* SceneDelegate.swift */; };
 		959C02F2238809A4007B1837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02F1238809A4007B1837 /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		950A0E562388182700E27EDB /* MonthInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthInformation.swift; sourceTree = "<group>"; };
+		950A0E5B23881A7C00E27EDB /* YearInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearInformation.swift; sourceTree = "<group>"; };
 		959C02EA238809A4007B1837 /* ScrollableCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959C02ED238809A4007B1837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959C02EF238809A4007B1837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 				950A0E562388182700E27EDB /* MonthInformation.swift */,
 			);
 			path = MonthInformation;
+			sourceTree = "<group>";
+		};
+		950A0E5823881A6000E27EDB /* YearInformation */ = {
+			isa = PBXGroup;
+			children = (
+				950A0E5B23881A7C00E27EDB /* YearInformation.swift */,
+			);
+			path = YearInformation;
 			sourceTree = "<group>";
 		};
 		959C02E1238809A4007B1837 = {
@@ -228,6 +238,7 @@
 		959C034023880CE9007B1837 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				950A0E5823881A6000E27EDB /* YearInformation */,
 				950A0E552388181600E27EDB /* MonthInformation */,
 				959C034323880D47007B1837 /* DayInformation */,
 			);
@@ -475,6 +486,7 @@
 			files = (
 				959C034223880D2F007B1837 /* DayInformation.swift in Sources */,
 				950A0E572388182700E27EDB /* MonthInformation.swift in Sources */,
+				950A0E5C23881A7C00E27EDB /* YearInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
