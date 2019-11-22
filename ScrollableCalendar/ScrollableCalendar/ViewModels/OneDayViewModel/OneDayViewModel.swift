@@ -12,13 +12,23 @@ import Core
 protocol OneDayViewModel {
     var day: Int { get }
     var weekday: String { get }
-    var isSelected: Bool { get }
     var dayType: DayType { get }
+    var isSelected: Bool { get }
 }
 
 struct DefaultOneDayViewModel: OneDayViewModel {
     let day: Int
     let weekday: String
-    let isSelected: Bool
     let dayType: DayType
+    let isSelected: Bool
+}
+
+extension DefaultOneDayViewModel {
+    
+    init(dayInformation: DayInformation, isSelected: Bool) {
+        self.day = dayInformation.day
+        self.weekday = dayInformation.weekday
+        self.dayType = dayInformation.dayType
+        self.isSelected = isSelected
+    }
 }
