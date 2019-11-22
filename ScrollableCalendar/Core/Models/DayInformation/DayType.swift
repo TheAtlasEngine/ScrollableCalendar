@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DayType {
+public enum DayType {
     case past
     case today
     case future

@@ -10,7 +10,7 @@
 		950A0E572388182700E27EDB /* MonthInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E562388182700E27EDB /* MonthInformation.swift */; };
 		950A0E5C23881A7C00E27EDB /* YearInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E5B23881A7C00E27EDB /* YearInformation.swift */; };
 		950A0E60238821C100E27EDB /* OneDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E5F238821C100E27EDB /* OneDayViewModel.swift */; };
-		950A0E632388225D00E27EDB /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E622388225D00E27EDB /* DayType.swift */; };
+		952E6D9F23882534006CF985 /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A0E622388225D00E27EDB /* DayType.swift */; };
 		959C02EE238809A4007B1837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02ED238809A4007B1837 /* AppDelegate.swift */; };
 		959C02F0238809A4007B1837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02EF238809A4007B1837 /* SceneDelegate.swift */; };
 		959C02F2238809A4007B1837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C02F1238809A4007B1837 /* ViewController.swift */; };
@@ -185,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				950A0E5F238821C100E27EDB /* OneDayViewModel.swift */,
-				950A0E622388225D00E27EDB /* DayType.swift */,
 			);
 			path = OneDayViewModel;
 			sourceTree = "<group>";
@@ -278,6 +277,7 @@
 		959C034323880D47007B1837 /* DayInformation */ = {
 			isa = PBXGroup;
 			children = (
+				950A0E622388225D00E27EDB /* DayType.swift */,
 				959C034123880D2F007B1837 /* DayInformation.swift */,
 			);
 			path = DayInformation;
@@ -491,7 +491,6 @@
 				950A0E60238821C100E27EDB /* OneDayViewModel.swift in Sources */,
 				959C02F2238809A4007B1837 /* ViewController.swift in Sources */,
 				959C02EE238809A4007B1837 /* AppDelegate.swift in Sources */,
-				950A0E632388225D00E27EDB /* DayType.swift in Sources */,
 				959C02F0238809A4007B1837 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952E6D9F23882534006CF985 /* DayType.swift in Sources */,
 				959C034223880D2F007B1837 /* DayInformation.swift in Sources */,
 				950A0E572388182700E27EDB /* MonthInformation.swift in Sources */,
 				950A0E5C23881A7C00E27EDB /* YearInformation.swift in Sources */,
