@@ -20,6 +20,7 @@
 		959C033423880B77007B1837 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 959C032423880B77007B1837 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		959C033723880B77007B1837 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959C032223880B77007B1837 /* Core.framework */; };
 		959C033823880B77007B1837 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 959C032223880B77007B1837 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		959C034223880D2F007B1837 /* DayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C034123880D2F007B1837 /* DayInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		959C032A23880B77007B1837 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		959C033123880B77007B1837 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		959C033323880B77007B1837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959C034123880D2F007B1837 /* DayInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		959C032323880B77007B1837 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				959C034023880CE9007B1837 /* Models */,
 				959C032423880B77007B1837 /* Core.h */,
 				959C032523880B77007B1837 /* Info.plist */,
 			);
@@ -210,6 +213,22 @@
 				959C033323880B77007B1837 /* Info.plist */,
 			);
 			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		959C034023880CE9007B1837 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				959C034323880D47007B1837 /* DayInformation */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		959C034323880D47007B1837 /* DayInformation */ = {
+			isa = PBXGroup;
+			children = (
+				959C034123880D2F007B1837 /* DayInformation.swift */,
+			);
+			path = DayInformation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +360,7 @@
 					};
 					959C032123880B77007B1837 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					959C032923880B77007B1837 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -442,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959C034223880D2F007B1837 /* DayInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,11 +641,12 @@
 		959C0315238809A8007B1837 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9T7E6YV3C;
 				INFOPLIST_FILE = ScrollableCalendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,11 +661,12 @@
 		959C0316238809A8007B1837 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9T7E6YV3C;
 				INFOPLIST_FILE = ScrollableCalendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -742,6 +765,7 @@
 		959C033A23880B77007B1837 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -759,6 +783,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.blackurocky.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -769,6 +794,7 @@
 		959C033B23880B77007B1837 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
