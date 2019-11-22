@@ -12,4 +12,16 @@ public enum DayType {
     case past
     case today
     case future
+    
+    public init(date: Date) {
+        let today = Date()
+        
+        if date == today {
+            self = .today
+        } else if date < today {
+            self = .past
+        } else {
+            self = .future
+        }
+    }
 }

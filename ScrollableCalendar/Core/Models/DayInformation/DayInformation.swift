@@ -13,6 +13,7 @@ public protocol DayInformation {
     var month: Int { get }
     var day: Int { get }
     var weekday: String { get }
+    var dayType: DayType { get }
 }
 
 public struct DefaultDayInformation: DayInformation {
@@ -20,6 +21,7 @@ public struct DefaultDayInformation: DayInformation {
     public let month: Int
     public let day: Int
     public let weekday: String
+    public let dayType: DayType
 }
 
 public extension DefaultDayInformation {
@@ -31,5 +33,7 @@ public extension DefaultDayInformation {
         
         let weekdayIndex = calendar.component(.weekday, from: date)
         self.weekday = calendar.shortWeekdaySymbols[weekdayIndex]
+        
+        self.dayType = DayType(date: date)
     }
 }
