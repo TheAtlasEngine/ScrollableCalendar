@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+struct Queue<T> {
+    
+    private var list = LinkedList<T>()
+    
+    public var isEmpty: Bool {
+        return list.isEmpty
+    }
+    
+    public mutating func enqueue(_ item: T) {
+        list.append(item)
+    }
+    
+    public mutating func dequeue() -> T? {
+        guard !isEmpty else { return nil }
+        
+        return list.remove(at: 0)
+    }
+    
+    public func peek() -> T? {
+        return list.first?.data
+    }
+}
