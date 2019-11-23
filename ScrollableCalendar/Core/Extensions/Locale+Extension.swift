@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+extension Locale {
+    
+    static let japan = Locale(identifier: "ja_JP")
+    static let unitedStates = Locale(identifier: "en_US")
+}
