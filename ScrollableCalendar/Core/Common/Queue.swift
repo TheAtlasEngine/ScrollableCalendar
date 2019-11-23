@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Queue<T> {
+struct Queue<T: Equatable> {
     
     private var list = LinkedList<T>()
     

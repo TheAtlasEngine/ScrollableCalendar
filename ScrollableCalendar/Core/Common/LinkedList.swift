@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class LinkedList<T> {
+public final class LinkedList<T: Equatable> {
     
     public typealias N = Node<T>
     
