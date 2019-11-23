@@ -21,9 +21,11 @@ struct Queue<T: Equatable> {
     }
     
     public mutating func dequeue() -> T? {
-        guard !isEmpty else { return nil }
+        guard !isEmpty, let element = list.first else { return nil }
         
-        return list.remove(at: 0)
+        list.remove(node: element)
+        
+        return element.data
     }
     
     public func peek() -> T? {

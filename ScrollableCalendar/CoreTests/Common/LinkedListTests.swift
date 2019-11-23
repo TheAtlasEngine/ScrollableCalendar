@@ -25,9 +25,6 @@ final class LinkedListTests: XCTestCase {
             XCTAssertNil(linkedList.node(at: -1), line: line)
             XCTAssertNil(linkedList.node(at: 0), line: line)
             XCTAssertNil(linkedList.node(at: 1), line: line)
-            XCTAssertNil(linkedList.remove(at: -1), line: line)
-            XCTAssertNil(linkedList.remove(at: 0), line: line)
-            XCTAssertNil(linkedList.remove(at: 1), line: line)
         }
         
         testEmptyList()
@@ -42,8 +39,8 @@ final class LinkedListTests: XCTestCase {
         XCTAssertEqual(linkedList.node(at: 1)?.data, node2.data)
         XCTAssertEqual(linkedList.node(at: 2)?.data, node3.data)
         
-        let removedData = linkedList.remove(at: 1)
-        XCTAssertEqual(removedData, node2.data)
+        linkedList.remove(node: linkedList.node(at: 1)!)
+        XCTAssert(!linkedList.isEmpty)
         XCTAssertEqual(linkedList.first?.data, node1.data)
         XCTAssertEqual(linkedList.last?.data, node3.data)
         XCTAssertEqual(linkedList.node(at: 0)?.data, node1.data)

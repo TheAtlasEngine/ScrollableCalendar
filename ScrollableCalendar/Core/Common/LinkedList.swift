@@ -9,7 +9,6 @@
 import Foundation
 
 public final class LinkedList<T: Equatable> {
-    
     public typealias N = Node<T>
     
     private var head: N?
@@ -55,26 +54,24 @@ public final class LinkedList<T: Equatable> {
     }
     
     @discardableResult
-    public func remove(at index: Int) -> T? {
-        guard let selectedNode = node(at: index) else { return nil }
-        
-        let previous = selectedNode.previous
-        let next = selectedNode.next
-        
+    public func remove(node: N) -> T? {
+        let previous = node.previous
+        let next = node.next
+
         if let previous = previous {
             previous.next = next
         } else {
             head = next
         }
         next?.previous = previous
-        
+
         if next == nil {
             tail = previous
         }
+
+        node.previous = nil
+        node.next = nil
         
-        selectedNode.previous = nil
-        selectedNode.next = nil
-        
-        return selectedNode.data
+        return node.data
     }
 }
