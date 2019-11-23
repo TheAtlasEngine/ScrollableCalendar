@@ -9,21 +9,14 @@
 import Foundation
 import Core
 
-protocol OneDayViewModel {
-    var day: Int { get }
-    var weekday: String { get }
-    var dayType: DayType { get }
-    var isSelected: Bool { get }
-}
-
-struct DefaultOneDayViewModel: OneDayViewModel {
+struct OneDayViewModel {
     let day: Int
     let weekday: String
     let dayType: DayType
     var isSelected: Bool
 }
 
-extension DefaultOneDayViewModel {
+extension OneDayViewModel {
     
     init(dayInformation: DayInformation, isSelected: Bool) {
         self.day = dayInformation.day

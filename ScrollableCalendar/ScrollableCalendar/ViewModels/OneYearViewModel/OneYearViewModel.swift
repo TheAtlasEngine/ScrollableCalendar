@@ -9,17 +9,12 @@
 import Foundation
 import Core
 
-protocol OneYearViewModel {
-    var year: Int { get }
-    var isLeapYear: Bool { get }
-}
-
-struct DefaultOneYearViewModel: OneYearViewModel {
+struct OneYearViewModel {
     let year: Int
     let isLeapYear: Bool
 }
 
-extension DefaultOneYearViewModel {
+extension OneYearViewModel {
     
     init(yearInformation: YearInformation) {
         self.year = yearInformation.year

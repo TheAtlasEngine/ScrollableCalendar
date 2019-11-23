@@ -9,17 +9,12 @@
 import Foundation
 import Core
 
-protocol OneMonthViewModel {
-    var month: Int { get }
-    var numberOfDays: Int { get }
-}
-
-struct DefaultOneMonthViewModel: OneMonthViewModel {
+struct OneMonthViewModel {
     let month: Int
     let numberOfDays: Int
 }
 
-extension DefaultOneMonthViewModel {
+extension OneMonthViewModel {
     
     init(monthInformation: MonthInformation) {
         self.month = monthInformation.month
