@@ -12,12 +12,14 @@ public protocol MonthInformation {
     var year: Int { get }
     var month: Int { get }
     var numberOfDays: Int { get }
+    var firstWeekday: Int { get }
 }
 
 public struct DefaultMonthInformation: MonthInformation {
     public let year: Int
     public let month: Int
     public let numberOfDays: Int
+    public let firstWeekday: Int
 }
 
 public extension DefaultMonthInformation {
@@ -39,5 +41,11 @@ public extension DefaultMonthInformation {
         default:
             self.numberOfDays = 0
         }
+        
+        let weekdayOfToday = calendar.component(.weekday, from: .today)
+        let today = calendar.component(.day, from: .today)
+        let numberOfDaysInWeek = 7
+        
+        self.firstWeekday = abs((today - weekdayOfToday) % numberOfDaysInWeek)
     }
 }
