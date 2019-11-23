@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+extension Date {
+    
+    static let today = Date()
+}
