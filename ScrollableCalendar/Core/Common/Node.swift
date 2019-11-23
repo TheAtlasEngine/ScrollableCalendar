@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+public final class Node<T> {
+    
+    var data: T?
+    var next: Node<T>?
+    weak var previous: Node<T>?
+    
+    init(data: T) {
+        self.data = data
+    }
+}
