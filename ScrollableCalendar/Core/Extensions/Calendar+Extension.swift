@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Calendar {
+public extension Calendar {
     
     static func calendar(locale: Locale) -> Calendar {
         var calendar = Calendar(identifier: .gregorian)
