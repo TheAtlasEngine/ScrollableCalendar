@@ -10,7 +10,8 @@ import Foundation
 
 public struct Week: Strideable {
     
-    public typealias Stride = Int
+    public typealias Weeks = Int
+    public typealias Stride = Weeks
     
     public let referenceDate: Date
     public var days: [Date] {
@@ -18,15 +19,15 @@ public struct Week: Strideable {
         let startIndex = -referenceDate.weekdayIndex
         let endIndex = startIndex + 6
         
-        return (startIndex...endIndex).map { referenceDate.added(day: $0) }
+        return (startIndex...endIndex).map { referenceDate.adding(day: $0) }
     }
     
     public init(referenceDate: Date) {
         self.referenceDate = referenceDate
     }
     
-    public func advanced(by n: Stride) -> Week {
-        let advancedReferenceDate = referenceDate.added(day: n)
+    public func advanced(by n: Week.Weeks) -> Week {
+        let advancedReferenceDate = referenceDate.adding(week: n)
         return Week(referenceDate: advancedReferenceDate)
     }
     

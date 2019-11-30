@@ -11,13 +11,24 @@ import XCTest
 
 final class WeekTests: XCTestCase {
 
-    func testDistance() {
+    // The weekday is Thursday
+    // The weekday index is 4
+    let theDay = Date(timeIntervalSince1970: 0)
+    
+    func testDays() {
         
-        // The weekday is Friday
-        // The weekday index is 5
-        let theDay = Date(timeIntervalSince1970: 0)
-        let theWeek: [Date] = (-5...1).map { theDay.added(day: $0) }
+        let theWeek: [Date] = (-4...2).map { theDay.adding(day: $0) }
         
         XCTAssertEqual(Week(referenceDate: theDay).days, theWeek)
+    }
+    
+    func testAdvanced() {
+        
+        let theDayInNextWeek = theDay.adding(week: 1)
+        let theNextWeek:  [Date] = (-4...2).map { theDayInNextWeek.adding(day: $0) }
+        
+        let testWeek = Week(referenceDate: theDay).advanced(by: 1)
+        
+        XCTAssertEqual(testWeek.days, theNextWeek)
     }
 }

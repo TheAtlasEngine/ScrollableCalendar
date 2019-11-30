@@ -53,7 +53,7 @@ public extension Date {
     }
     
     var weekdayIndex: Int {
-        return dateComponents.weekday!
+        return dateComponents.weekday! - 1
     }
     
     /// Returns the localized weekday symbol of given day
@@ -62,7 +62,15 @@ public extension Date {
         return symbols[weekdayIndex]
     }
     
-    func added(day: Int) -> Date {
-        return self.advanced(by: TimeInterval(Date.oneDay * day))
+    func adding(day: Int) -> Date {
+        return calendar.date(byAdding: .day, value: day, to: self)!
+    }
+    
+    func adding(week: Int) -> Date {
+        return calendar.date(byAdding: .day, value: week * 7, to: self)!
+    }
+    
+    func adding(month: Int) -> Date {
+        return calendar.date(byAdding: .month, value: month, to: self)!
     }
 }
