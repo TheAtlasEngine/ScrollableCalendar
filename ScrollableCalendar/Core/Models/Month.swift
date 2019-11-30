@@ -1,5 +1,5 @@
 //
-//  MonthInformation.swift
+//  Month.swift
 //  Core
 //
 //  Created by Kosuke Nishimura on 2019/11/22.
@@ -8,27 +8,27 @@
 
 import Foundation
 
-public protocol MonthInformation {
-    var year: Int { get }
-    var month: Int { get }
-    var numberOfDays: Int { get }
-    var firstWeekday: Int { get }
-}
-
-public struct DefaultMonthInformation: MonthInformation {
-    public let year: Int
+public struct Month {
+    public typealias Day = (day: Int, weekday: Int)
+    
     public let month: Int
     public let numberOfDays: Int
     public let firstWeekday: Int
+    
+    public var days: [Day] {
+        let numberOfDaysInWeek = 7
+        return (1...numberOfDaysInWeek).map { day -> Day in
+            (day, (day - 1 + firstWeekday) % numberOfDaysInWeek)
+        }
+    }
 }
 
-public extension DefaultMonthInformation {
+public extension Month {
     
-    init(calendar: Calendar, date: Date) {
-        let theYear = calendar.component(.year, from: date)
-        self.year = theYear
+    init(calendar: Calendar) {
+        let theYear = calendar.component(.year, from: .today)
         
-        self.month = calendar.component(.month, from: date)
+        self.month = calendar.component(.month, from: .today)
         
         let isLeapYear = theYear % 4 == 0 && theYear % 100 != 0 || theYear % 400 == 0
         switch self.month {
