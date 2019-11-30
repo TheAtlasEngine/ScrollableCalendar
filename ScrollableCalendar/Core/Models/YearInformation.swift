@@ -20,8 +20,8 @@ public struct DefaultYearInformation: YearInformation {
 
 public extension DefaultYearInformation {
     
-    init(calendar: Calendar, date: Date) {
-        let theYear = calendar.component(.year, from: date)
+    init(calendar: Calendar) {
+        let theYear = calendar.component(.year, from: .today)
         self.year = theYear
         self.isLeapYear = theYear % 4 == 0 && theYear % 100 != 0 || theYear % 400 == 0
     }
