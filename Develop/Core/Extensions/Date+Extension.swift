@@ -73,4 +73,8 @@ public extension Date {
     func adding(month: Int) -> Date {
         return calendar.date(byAdding: .month, value: month, to: self)!
     }
+    
+    func adding(year: Int) -> Date {
+        return calendar.date(byAdding: .year, value: year, to: self)!
+    }
 }

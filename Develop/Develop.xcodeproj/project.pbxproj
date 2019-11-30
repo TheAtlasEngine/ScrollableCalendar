@@ -25,6 +25,8 @@
 		952E6E302392744E006CF985 /* WeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E6E2F2392744E006CF985 /* WeekTests.swift */; };
 		952E6E3723928647006CF985 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E6E3623928647006CF985 /* Month.swift */; };
 		952E6E3B23929085006CF985 /* MonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E6E3A23929085006CF985 /* MonthTests.swift */; };
+		952E6E3D239293CF006CF985 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E6E3C239293CF006CF985 /* Year.swift */; };
+		952E6E3F23929554006CF985 /* YearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E6E3E23929554006CF985 /* YearTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		952E6E2F2392744E006CF985 /* WeekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTests.swift; sourceTree = "<group>"; };
 		952E6E3623928647006CF985 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		952E6E3A23929085006CF985 /* MonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTests.swift; sourceTree = "<group>"; };
+		952E6E3C239293CF006CF985 /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
+		952E6E3E23929554006CF985 /* YearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,7 @@
 				952E6E2223923C7D006CF985 /* Extensions */,
 				952E6E2C2392554E006CF985 /* Week.swift */,
 				952E6E3623928647006CF985 /* Month.swift */,
+				952E6E3C239293CF006CF985 /* Year.swift */,
 				952E6E0623923C50006CF985 /* Core.h */,
 				952E6E0723923C50006CF985 /* Info.plist */,
 			);
@@ -223,6 +228,7 @@
 				952E6E1523923C50006CF985 /* Info.plist */,
 				952E6E2F2392744E006CF985 /* WeekTests.swift */,
 				952E6E3A23929085006CF985 /* MonthTests.swift */,
+				952E6E3E23929554006CF985 /* YearTests.swift */,
 			);
 			path = CoreTests;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 			files = (
 				952E6E2423923C96006CF985 /* Date+Extension.swift in Sources */,
 				952E6E2D2392554E006CF985 /* Week.swift in Sources */,
+				952E6E3D239293CF006CF985 /* Year.swift in Sources */,
 				952E6E3723928647006CF985 /* Month.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +485,7 @@
 			files = (
 				952E6E1423923C50006CF985 /* CoreTests.swift in Sources */,
 				952E6E302392744E006CF985 /* WeekTests.swift in Sources */,
+				952E6E3F23929554006CF985 /* YearTests.swift in Sources */,
 				952E6E3B23929085006CF985 /* MonthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
