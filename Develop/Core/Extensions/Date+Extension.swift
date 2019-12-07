@@ -78,3 +78,26 @@ public extension Date {
         return calendar.date(byAdding: .year, value: year, to: self)!
     }
 }
+
+public extension Date {
+    
+    enum Unit {
+        case day
+        case week
+        case month
+        case year
+    }
+    
+    func adding(value: Int, in unit: Unit) -> Date {
+        switch unit {
+        case .day:
+            return calendar.date(byAdding: .day, value: value, to: self)!
+        case .week:
+            return calendar.date(byAdding: .day, value: value * 7, to: self)!
+        case .month:
+            return calendar.date(byAdding: .month, value: value, to: self)!
+        case .year:
+            return calendar.date(byAdding: .year, value: value, to: self)!
+        }
+    }
+}
