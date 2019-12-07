@@ -16,36 +16,13 @@ public struct Month: Strideable {
     public let referenceDate: Date
     
     public var numberOfDays: Int {
-        let month = referenceDate.month
-        let year = referenceDate.year
-        let isLeapYear = year % 4 == 0 && year % 100 != 0 || year % 400 == 0
-        
-        switch month {
-        case 1, 3, 5, 7, 8, 10, 12:
-            return 31
-        case 4, 6, 9, 11:
-            return 30
-        case 2:
-            return isLeapYear ? 29 : 28
-        default:
-            return 0
-        }
+        return referenceDate.numberOfDaysInMonth
     }
     
     public var weeks: [Week] {
         let firstDay = referenceDate.adding(value: 1 - referenceDate.day, in: .day)
-        let lastDay = referenceDate.adding(value: numberOfDays - referenceDate.day, in: .day)
         
-        var weeks: [Week] = []
-        for weekIndex in (0...5) {
-            let week = Week(referenceDate: firstDay.adding(value: weekIndex, in: .week))
-            weeks.append(week)
-            if week.days.contains(lastDay) {
-                break
-            }
-        }
-        
-        return weeks
+        return (0...5).map { Week(referenceDate: firstDay.adding(value: $0, in: .week)) }
     }
 
     public init(referenceDate: Date) {

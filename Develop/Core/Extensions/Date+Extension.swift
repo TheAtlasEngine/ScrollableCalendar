@@ -56,6 +56,14 @@ public extension Date {
         return dateComponents.weekday! - 1
     }
     
+    var isLeapMonth: Bool {
+        return dateComponents.isLeapMonth!
+    }
+    
+    var numberOfDaysInMonth: Int {
+        return calendar.range(of: .day, in: .month, for: self)!.count
+    }
+    
     /// Returns the localized weekday symbol of given day
     func weekday(useShortSymbol: Bool) -> String {
         let symbols = useShortSymbol ? calendar.shortWeekdaySymbols : calendar.weekdaySymbols
