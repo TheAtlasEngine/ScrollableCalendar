@@ -15,20 +15,28 @@ final class WeekTests: XCTestCase {
     // The weekday index is 4
     let theDay = Date(timeIntervalSince1970: 0)
     
+    private var theWeek: Week {
+        return Week(referenceDate: theDay)
+    }
+    
     func testDays() {
-        
-        let theWeek: [Date] = (-4...2).map { theDay.adding(value: $0, in: .day) }
-        
-        XCTAssertEqual(Week(referenceDate: theDay).days, theWeek)
+        let expected: [Date] = (-4...2).map { theDay.adding(value: $0, in: .day) }
+        XCTAssertEqual(theWeek.days, expected)
     }
     
     func testAdvanced() {
         
         let theDayInNextWeek = theDay.adding(value: 1, in: .week)
-        let theNextWeek:  [Date] = (-4...2).map { theDayInNextWeek.adding(value: $0, in: .day) }
+        let nextWeek = theWeek.advanced(by: 1)
+        let expectedNextWeek:  [Date] = (-4...2).map { theDayInNextWeek.adding(value: $0, in: .day) }
+        XCTAssertEqual(nextWeek.days, expectedNextWeek)
+    }
+    
+    func testDistance() {
         
-        let testWeek = Week(referenceDate: theDay).advanced(by: 1)
-        
-        XCTAssertEqual(testWeek.days, theNextWeek)
+        for n in (-3...3) {
+            let result = theWeek.advanced(by: n)
+            XCTAssertEqual(result.distance(to: theWeek), n)
+        }
     }
 }

@@ -31,11 +31,8 @@ public struct Week: Strideable {
         return Week(referenceDate: advancedReferenceDate)
     }
     
-    // TODO: modify this method
-    // This method should return the number of weeks between `self` and given `Week`,
-    // but currently the method returns the distance from `self.referenceDate` to `other.referenceDate`
     public func distance(to other: Week) -> Stride {
-        return Int(exactly: other.referenceDate.timeIntervalSince(referenceDate))!
+        return referenceDate.distance(to: other.referenceDate, in: .week)
     }
     
 }

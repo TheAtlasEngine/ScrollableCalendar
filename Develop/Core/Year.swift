@@ -30,10 +30,7 @@ public struct Year: Strideable {
         return Year(referenceDate: referenceDate.adding(value: n, in: .year))
     }
     
-    // TODO: modify this method
-    // This method should return the number of years between `self` and given `Year`,
-    // but currently the method returns the distance from `self.referenceDate` to `other.referenceDate`
     public func distance(to other: Year) -> Year.Years {
-        return Int(exactly: other.referenceDate.timeIntervalSince(referenceDate))!
+        return referenceDate.distance(to: other.referenceDate, in: .year)
     }
 }
