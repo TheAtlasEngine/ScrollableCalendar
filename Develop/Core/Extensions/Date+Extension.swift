@@ -61,22 +61,6 @@ public extension Date {
         let symbols = useShortSymbol ? calendar.shortWeekdaySymbols : calendar.weekdaySymbols
         return symbols[weekdayIndex]
     }
-    
-    func adding(day: Int) -> Date {
-        return calendar.date(byAdding: .day, value: day, to: self)!
-    }
-    
-    func adding(week: Int) -> Date {
-        return calendar.date(byAdding: .day, value: week * 7, to: self)!
-    }
-    
-    func adding(month: Int) -> Date {
-        return calendar.date(byAdding: .month, value: month, to: self)!
-    }
-    
-    func adding(year: Int) -> Date {
-        return calendar.date(byAdding: .year, value: year, to: self)!
-    }
 }
 
 public extension Date {
