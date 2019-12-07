@@ -31,6 +31,7 @@ public struct Week: Strideable {
         return Week(referenceDate: advancedReferenceDate)
     }
     
+    /// a negative value means `self` is past comparing to `other`
     public func distance(to other: Week) -> Stride {
         return referenceDate.distance(to: other.referenceDate, in: .week)
     }

@@ -30,6 +30,7 @@ public struct Year: Strideable {
         return Year(referenceDate: referenceDate.adding(value: n, in: .year))
     }
     
+    /// a negative value means `self` is past comparing to `other`
     public func distance(to other: Year) -> Year.Years {
         return referenceDate.distance(to: other.referenceDate, in: .year)
     }

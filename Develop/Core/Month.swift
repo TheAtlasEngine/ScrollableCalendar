@@ -56,9 +56,7 @@ public struct Month: Strideable {
         return Month(referenceDate: referenceDate.adding(value: n, in: .month))
     }
     
-    // TODO: modify this method
-    // This method should return the number of months between `self` and given `Month`,
-    // but currently the method returns the distance from `self.referenceDate` to `other.referenceDate`
+    /// a negative value means `self` is past comparing to `other`
     public func distance(to other: Month) -> Month.Months {
         return referenceDate.distance(to: other.referenceDate, in: .month)
     }
