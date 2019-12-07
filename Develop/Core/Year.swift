@@ -19,7 +19,7 @@ public struct Year: Strideable {
         let startIndex = 1 - referenceDate.month
         let endIndex = startIndex + 11
         
-        return (startIndex...endIndex).map { Month(referenceDate: referenceDate.adding(month: $0)) }
+        return (startIndex...endIndex).map { Month(referenceDate: referenceDate.adding(value: $0, in: .month)) }
     }
     
     public init(referenceDate: Date) {
@@ -27,7 +27,7 @@ public struct Year: Strideable {
     }
     
     public func advanced(by n: Year.Years) -> Year {
-        return Year(referenceDate: referenceDate.adding(year: n))
+        return Year(referenceDate: referenceDate.adding(value: n, in: .year))
     }
     
     // TODO: modify this method

@@ -17,15 +17,15 @@ final class WeekTests: XCTestCase {
     
     func testDays() {
         
-        let theWeek: [Date] = (-4...2).map { theDay.adding(day: $0) }
+        let theWeek: [Date] = (-4...2).map { theDay.adding(value: $0, in: .day) }
         
         XCTAssertEqual(Week(referenceDate: theDay).days, theWeek)
     }
     
     func testAdvanced() {
         
-        let theDayInNextWeek = theDay.adding(week: 1)
-        let theNextWeek:  [Date] = (-4...2).map { theDayInNextWeek.adding(day: $0) }
+        let theDayInNextWeek = theDay.adding(value: 1, in: .week)
+        let theNextWeek:  [Date] = (-4...2).map { theDayInNextWeek.adding(value: $0, in: .day) }
         
         let testWeek = Week(referenceDate: theDay).advanced(by: 1)
         

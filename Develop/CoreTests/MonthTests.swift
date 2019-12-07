@@ -19,10 +19,10 @@ final class MonthTests: XCTestCase {
     func testWeeks() {
         let expected: [Week] = [
             Week(referenceDate: theDay),
-            Week(referenceDate: theDay.adding(week: 1)),
-            Week(referenceDate: theDay.adding(week: 2)),
-            Week(referenceDate: theDay.adding(week: 3)),
-            Week(referenceDate: theDay.adding(week: 4)),
+            Week(referenceDate: theDay.adding(value: 1, in: .week)),
+            Week(referenceDate: theDay.adding(value: 2, in: .week)),
+            Week(referenceDate: theDay.adding(value: 3, in: .week)),
+            Week(referenceDate: theDay.adding(value: 4, in: .week)),
         ]
         
         let result = Month(referenceDate: theDay).weeks

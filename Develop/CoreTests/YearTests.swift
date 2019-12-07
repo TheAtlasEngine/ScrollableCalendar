@@ -17,7 +17,7 @@ final class YearTests: XCTestCase {
     let theDay = Date(timeIntervalSince1970: 0)
     
     func testMonths() {
-        let expected: [Month] = (0...11).map { Month(referenceDate: theDay.adding(month: $0)) }
+        let expected: [Month] = (0...11).map { Month(referenceDate: theDay.adding(value: $0, in: .month)) }
         let result = Year(referenceDate: theDay).months
         
         XCTAssertEqual(result, expected)

@@ -33,12 +33,12 @@ public struct Month: Strideable {
     }
     
     public var weeks: [Week] {
-        let firstDay = referenceDate.adding(day: 1 - referenceDate.day)
-        let lastDay = referenceDate.adding(day: numberOfDays - referenceDate.day)
+        let firstDay = referenceDate.adding(value: 1 - referenceDate.day, in: .day)
+        let lastDay = referenceDate.adding(value: numberOfDays - referenceDate.day, in: .day)
         
         var weeks: [Week] = []
         for weekIndex in (0...5) {
-            let week = Week(referenceDate: firstDay.adding(week: weekIndex))
+            let week = Week(referenceDate: firstDay.adding(value: weekIndex, in: .week))
             weeks.append(week)
             if week.days.contains(lastDay) {
                 break
@@ -53,7 +53,7 @@ public struct Month: Strideable {
     }
 
     public func advanced(by n: Month.Months) -> Month {
-        return Month(referenceDate: referenceDate.adding(month: n))
+        return Month(referenceDate: referenceDate.adding(value: n, in: .month))
     }
     
     // TODO: modify this method
