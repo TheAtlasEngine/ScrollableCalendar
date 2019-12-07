@@ -44,9 +44,12 @@ public enum Weekday: Int, CaseIterable {
         return useShortSymbol ? calendar.shortWeekdaySymbols[rawValue] : calendar.shortWeekdaySymbols[rawValue]
     }
     
-    public static func allSymbols(useShortSymbols: Bool) -> [String] {
+    public static func allSymbols(startWeekday: Weekday, useShortSymbols: Bool) -> [String] {
         let calendar = Calendar.current
+        let symbols = useShortSymbols ? calendar.shortWeekdaySymbols : calendar.shortWeekdaySymbols
+        let startIndex = startWeekday.rawValue
+        let endIndex = startIndex + 6
         
-        return useShortSymbols ? calendar.shortWeekdaySymbols : calendar.shortWeekdaySymbols
+        return (startIndex...endIndex).map { symbols[$0 % 7] }
     }
 }

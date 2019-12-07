@@ -27,4 +27,21 @@ final class WeekdayTests: XCTestCase {
         let resultShortSymbols = weekdays.map { $0.symbol(useShortSymbol: true) }
         XCTAssertEqual(resultShortSymbols, shortSymbols)
     }
+    
+    func testAllSymbols() {
+        let startWithSunday = Weekday.allSymbols(startWeekday: .sunday, useShortSymbols: true)
+        XCTAssertEqual(startWithSunday, shortSymbols)
+        
+        let startWithMonday = Weekday.allSymbols(startWeekday: .monday, useShortSymbols: true)
+        let expected = [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+        ]
+        XCTAssertEqual(startWithMonday, expected)
+    }
 }
