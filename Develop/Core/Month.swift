@@ -15,6 +15,10 @@ public struct Month: Strideable {
 
     public let referenceDate: Date
     
+    public init(referenceDate: Date) {
+        self.referenceDate = referenceDate
+    }
+    
     public var numberOfDays: Int {
         return referenceDate.numberOfDaysInMonth
     }
@@ -23,10 +27,6 @@ public struct Month: Strideable {
         let firstDay = referenceDate.adding(value: 1 - referenceDate.day, in: .day)
         
         return (0...5).map { Week(referenceDate: firstDay.adding(value: $0, in: .week)) }
-    }
-
-    public init(referenceDate: Date) {
-        self.referenceDate = referenceDate
     }
 
     public func advanced(by n: Month.Months) -> Month {

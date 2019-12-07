@@ -14,16 +14,17 @@ public struct Week: Strideable {
     public typealias Stride = Weeks
     
     public let referenceDate: Date
+    
+    public init(referenceDate: Date) {
+        self.referenceDate = referenceDate
+    }
+    
     public var days: [Date] {
         
         let startIndex = -referenceDate.weekdayIndex
         let endIndex = startIndex + 6
         
         return (startIndex...endIndex).map { referenceDate.adding(value: $0, in: .day) }
-    }
-    
-    public init(referenceDate: Date) {
-        self.referenceDate = referenceDate
     }
     
     public func advanced(by n: Week.Weeks) -> Week {
