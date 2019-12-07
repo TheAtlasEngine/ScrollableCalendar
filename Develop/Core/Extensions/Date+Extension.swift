@@ -84,4 +84,19 @@ public extension Date {
             return calendar.date(byAdding: .year, value: value, to: self)!
         }
     }
+    
+    /// a negative value means `self` is past comparing to `other`
+    func distance(to other: Date, in unit: Unit) -> Int {
+        let component = calendar.dateComponents([.day, .month, .year], from: other, to: self)
+        switch unit {
+        case .day:
+            return component.day!
+        case .week:
+            return component.day! / 7
+        case .month:
+            return component.month!
+        case .year:
+            return component.year!
+        }
+    }
 }
