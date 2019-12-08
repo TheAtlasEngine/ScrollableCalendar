@@ -31,5 +31,16 @@ final class DateTests: XCTestCase {
         XCTAssertEqual(nextYear.distance(to: today, in: .year), 1)
         XCTAssertEqual(previousYear.distance(to: today, in: .year), -1)
     }
+    
+//    func testIsLeapYear() {
+//        let january1970 = Date(timeIntervalSince1970: 0)
+//        XCTAssertFalse(january1970.isLeapMonth)
+//
+//        let january2020 = january1970.adding(value: 50, in: .year)
+//        XCTAssertFalse(january2020.isLeapMonth)
+//
+//        let february2020 = january2020.adding(value: 1, in: .month)
+//        XCTAssertTrue(february2020.isLeapMonth)
+//    }
 
 }

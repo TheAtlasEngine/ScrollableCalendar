@@ -56,9 +56,11 @@ public extension Date {
         return dateComponents.weekday! - 1
     }
     
-    var isLeapMonth: Bool {
-        return dateComponents.isLeapMonth!
-    }
+    // FIXME: this property should return true if `self` is february 2020,
+    // but currently returns false and I don't know why.
+//    var isLeapMonth: Bool {
+//        return dateComponents.isLeapMonth!
+//    }
     
     var numberOfDaysInMonth: Int {
         return calendar.range(of: .day, in: .month, for: self)!.count
